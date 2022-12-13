@@ -120,6 +120,7 @@ void colorUpdate(int color, int transition, bool state) {
     Serial.println("connected to server");
     // Make a HTTP request: first building the URL
     client.print("PUT ");
+    client.print("/api/");
     client.print(api_key);
     client.print("/lights/");
     client.print(lightNum);
